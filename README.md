@@ -75,8 +75,8 @@ func main() {
 	//validate Struct data
 	v.Struct(one)
 	if !v.IsOk {
-		fmt.Println(v.Errors())
-		//fmt.Println(v.ErrorOne())
+		fmt.Printf("%#v", v.Errors())
+		//fmt.Printf("%#v", v.ErrorOne())
 	} else {
 		fmt.Println("enjoy!")
 	}
