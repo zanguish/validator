@@ -1,21 +1,3 @@
-Go validator
-
-The package is a generic Go data validate tool library.
-
-- Support add custom validator func
-- Support custom error messages
-- Support i18n,built-in `en`, `zh_CN`
-- Support reg custom regular rules
-
-### Installation
-
-```
-go get github.com/zanguish/validator
-```
-
-### Usage
-
-```go
 package validator
 
 import (
@@ -113,9 +95,7 @@ func init() {
 	//v.SetTagName("v")
 
 	//Customize the error message or override the default error message
-	v.WithMsg(map[string]string{
-
-	})
+	v.WithMsg(map[string]string{})
 }
 func TestCheckMap(t *testing.T) {
 	testMap := make(map[string]interface{})
@@ -178,9 +158,3 @@ func TestCheckStruct(t *testing.T) {
 		t.Fatal(v.FirstErr())
 	}
 }
-
-```
-
-### License
-
-#### MIT
